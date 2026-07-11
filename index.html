@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NEXUS CYBORG — The future of human augmentation. Discover next-generation cybernetic enhancements that merge biology with breakthrough technology." />
+  <title>NEXUS CYBORG | Human. Enhanced. Evolved.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ░░ PARTICLE CANVAS ░░ -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ░░ SCAN LINE OVERLAY ░░ -->
+  <div class="scanline-overlay" aria-hidden="true"></div>
+
+  <!-- ░░ NAVIGATION ░░ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" id="nav-logo-link" aria-label="NEXUS CYBORG Home">
+        <span class="logo-icon" aria-hidden="true">⬡</span>
+        <span class="logo-text">NEXUS<span class="logo-accent">CYBORG</span></span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#features" class="nav-link" id="nav-features">MODULES</a></li>
+        <li><a href="#stats" class="nav-link" id="nav-stats">METRICS</a></li>
+        <li><a href="#technology" class="nav-link" id="nav-tech">TECH</a></li>
+        <li><a href="#testimonials" class="nav-link" id="nav-testimonials">FIELD REPORTS</a></li>
+        <li><a href="#contact" class="nav-cta" id="nav-cta-btn">INITIALIZE</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" role="menu" aria-hidden="true">
+      <a href="#features" class="mob-link" id="mob-features" role="menuitem">MODULES</a>
+      <a href="#stats" class="mob-link" id="mob-stats" role="menuitem">METRICS</a>
+      <a href="#technology" class="mob-link" id="mob-tech" role="menuitem">TECH</a>
+      <a href="#testimonials" class="mob-link" id="mob-testimonials" role="menuitem">FIELD REPORTS</a>
+      <a href="#contact" class="mob-cta" id="mob-cta-btn" role="menuitem">INITIALIZE</a>
+    </div>
+  </nav>
+
+  <!-- ░░ HERO SECTION ░░ -->
+  <section id="hero" class="hero" aria-labelledby="hero-heading">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-badge" aria-label="System Status Online">
+        <span class="badge-dot" aria-hidden="true"></span>
+        SYSTEM STATUS: ONLINE
+      </div>
+      <h1 id="hero-heading" class="hero-title">
+        <span class="title-line">HUMAN.</span>
+        <span class="title-line title-accent">ENHANCED.</span>
+        <span class="title-line">EVOLVED.</span>
+      </h1>
+      <p class="hero-sub">
+        Next-generation cybernetic augmentation systems that redefine the boundaries of human capability. Merge your biology with breakthrough neuro-tech.
+      </p>
+      <div class="hero-terminal" aria-label="System boot sequence">
+        <span class="terminal-prompt">SYS&gt;</span>
+        <span class="terminal-text" id="terminal-output"></span>
+        <span class="terminal-cursor" aria-hidden="true">█</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#features" class="btn-primary" id="hero-cta-primary">
+          <span class="btn-glow" aria-hidden="true"></span>
+          AUGMENT NOW
+        </a>
+        <a href="#technology" class="btn-secondary" id="hero-cta-secondary">
+          VIEW SCHEMATICS
+        </a>
+      </div>
+      <div class="hero-stats-bar" aria-label="Quick stats">
+        <div class="hstat"><span class="hstat-val">47K+</span><span class="hstat-lbl">Augmented</span></div>
+        <div class="hstat-sep" aria-hidden="true"></div>
+        <div class="hstat"><span class="hstat-val">99.7%</span><span class="hstat-lbl">Uptime</span></div>
+        <div class="hstat-sep" aria-hidden="true"></div>
+        <div class="hstat"><span class="hstat-val">0ms</span><span class="hstat-lbl">Neural Lag</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-img-frame">
+        <div class="frame-corner tl"></div>
+        <div class="frame-corner tr"></div>
+        <div class="frame-corner bl"></div>
+        <div class="frame-corner br"></div>
+        <img src="cyborg_hero.png"
+             alt="Cyborg warrior with neon cybernetic implants"
+             class="hero-img"
+             id="hero-main-image"
+             loading="eager" />
+        <div class="hero-hud hud-top">SYS_ID: NX-7791</div>
+        <div class="hero-hud hud-bot">NEURAL LINK: ACTIVE</div>
+        <div class="hero-scan-line"></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-label="Scroll down">
+      <span class="scroll-arrow"></span>
+      <span class="scroll-txt">SCROLL</span>
+    </div>
+  </section>
+
+  <!-- ░░ FEATURES SECTION ░░ -->
+  <section id="features" class="features" aria-labelledby="features-heading">
+    <div class="section-header">
+      <div class="section-tag">// AUGMENTATION MODULES</div>
+      <h2 id="features-heading" class="section-title">CORE <span class="accent">SYSTEMS</span></h2>
+      <p class="section-sub">Each module engineered to unprecedented tolerances, pushing biological performance beyond human limits.</p>
+    </div>
+    <div class="features-grid">
+
+      <article class="feature-card" id="feature-neural" aria-labelledby="feature-neural-title">
+        <div class="card-glow" aria-hidden="true"></div>
+        <div class="card-icon" aria-hidden="true">
+          <img src="cyborg_brain.png" alt="" class="card-img" />
+        </div>
+        <div class="card-tag">MODULE 01</div>
+        <h3 id="feature-neural-title" class="card-title">NEURAL LINK PRO</h3>
+        <p class="card-desc">Direct brain-computer interface with 256-channel neural mapping. Process data at the speed of thought with latency below measurable thresholds.</p>
+        <ul class="card-specs" aria-label="Specifications">
+          <li><span class="spec-icon" aria-hidden="true">◆</span> 256-CH Neural Mapping</li>
+          <li><span class="spec-icon" aria-hidden="true">◆</span> Sub-0ms Response Time</li>
+          <li><span class="spec-icon" aria-hidden="true">◆</span> Quantum Encryption</li>
+        </ul>
+        <a href="#contact" class="card-cta" id="feature-neural-cta">INTEGRATE →</a>
+      </article>
+
+      <article class="feature-card feature-card--hero" id="feature-arm" aria-labelledby="feature-arm-title">
+        <div class="card-glow card-glow--accent" aria-hidden="true"></div>
+        <div class="card-badge">BESTSELLER</div>
+        <div class="card-icon" aria-hidden="true">
+          <img src="cyborg_arm.png" alt="" class="card-img" />
+        </div>
+        <div class="card-tag">MODULE 02</div>
+        <h3 id="feature-arm-title" class="card-title">TITAN ARM X7</h3>
+        <p class="card-desc">Titanium-graphene composite limb with haptic feedback network. 10× human strength baseline with micro-precision control for surgical accuracy.</p>
+        <ul class="card-specs" aria-label="Specifications">
+          <li><span class="spec-icon" aria-hidden="true">◆</span> 10× Strength Amplification</li>
+          <li><span class="spec-icon" aria-hidden="true">◆</span> 0.001mm Haptic Precision</li>
+          <li><span class="spec-icon" aria-hidden="true">◆</span> Self-Repair Nanobots</li>
+        </ul>
+        <a href="#contact" class="card-cta card-cta--accent" id="feature-arm-cta">INTEGRATE →</a>
+      </article>
+
+      <article class="feature-card" id="feature-eye" aria-labelledby="feature-eye-title">
+        <div class="card-glow" aria-hidden="true"></div>
+        <div class="card-icon" aria-hidden="true">
+          <img src="cyborg_eye.png" alt="" class="card-img" />
+        </div>
+        <div class="card-tag">MODULE 03</div>
+        <h3 id="feature-eye-title" class="card-title">OPTIC VORTEX</h3>
+        <p class="card-desc">Synthetic retina with 8K holographic overlays, thermal vision, and AI-assisted target tracking. See beyond the visible spectrum.</p>
+        <ul class="card-specs" aria-label="Specifications">
+          <li><span class="spec-icon" aria-hidden="true">◆</span> 8K HUD Display</li>
+          <li><span class="spec-icon" aria-hidden="true">◆</span> 360° Thermal Vision</li>
+          <li><span class="spec-icon" aria-hidden="true">◆</span> AI Target Acquisition</li>
+        </ul>
+        <a href="#contact" class="card-cta" id="feature-eye-cta">INTEGRATE →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ░░ STATS SECTION ░░ -->
+  <section id="stats" class="stats-section" aria-labelledby="stats-heading">
+    <div class="stats-bg" aria-hidden="true"></div>
+    <div class="section-header">
+      <div class="section-tag">// PERFORMANCE METRICS</div>
+      <h2 id="stats-heading" class="section-title">BY THE <span class="accent">NUMBERS</span></h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-item" id="stat-users">
+        <div class="stat-num" data-target="47291" data-suffix="+" aria-label="47,291 plus augmented humans">0</div>
+        <div class="stat-label">Augmented Humans</div>
+        <div class="stat-bar"><div class="stat-fill" style="--fill: 94%"></div></div>
+      </div>
+      <div class="stat-item" id="stat-uptime">
+        <div class="stat-num" data-target="99" data-suffix=".7%" aria-label="99.7% system uptime">0</div>
+        <div class="stat-label">System Uptime</div>
+        <div class="stat-bar"><div class="stat-fill" style="--fill: 99%"></div></div>
+      </div>
+      <div class="stat-item" id="stat-countries">
+        <div class="stat-num" data-target="138" data-suffix=" Nations" aria-label="138 nations">0</div>
+        <div class="stat-label">Global Deployment</div>
+        <div class="stat-bar"><div class="stat-fill" style="--fill: 71%"></div></div>
+      </div>
+      <div class="stat-item" id="stat-patents">
+        <div class="stat-num" data-target="2400" data-suffix="+" aria-label="2400 plus patents">0</div>
+        <div class="stat-label">Patents Filed</div>
+        <div class="stat-bar"><div class="stat-fill" style="--fill: 88%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ TECHNOLOGY SECTION ░░ -->
+  <section id="technology" class="tech-section" aria-labelledby="tech-heading">
+    <div class="section-header">
+      <div class="section-tag">// TECHNICAL SPECIFICATIONS</div>
+      <h2 id="tech-heading" class="section-title">ENGINEERED FOR <span class="accent">SUPREMACY</span></h2>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-visual" aria-hidden="true">
+        <div class="tech-ring ring-outer"></div>
+        <div class="tech-ring ring-mid"></div>
+        <div class="tech-ring ring-inner"></div>
+        <div class="tech-core">
+          <span class="tech-core-txt">NX</span>
+          <span class="tech-core-sub">v7.0</span>
+        </div>
+        <div class="tech-orbit-dot dot-1"></div>
+        <div class="tech-orbit-dot dot-2"></div>
+        <div class="tech-orbit-dot dot-3"></div>
+      </div>
+      <div class="tech-specs">
+        <div class="spec-row" id="spec-processor">
+          <div class="spec-label">NEURAL PROCESSOR</div>
+          <div class="spec-bar-wrap">
+            <div class="spec-bar-fill" style="--w:96%" data-label="QUANTUM-X8 / 96%"></div>
+          </div>
+        </div>
+        <div class="spec-row" id="spec-bandwidth">
+          <div class="spec-label">SIGNAL BANDWIDTH</div>
+          <div class="spec-bar-wrap">
+            <div class="spec-bar-fill" style="--w:88%" data-label="1.2 TB/s / 88%"></div>
+          </div>
+        </div>
+        <div class="spec-row" id="spec-power">
+          <div class="spec-label">POWER EFFICIENCY</div>
+          <div class="spec-bar-wrap">
+            <div class="spec-bar-fill" style="--w:79%" data-label="3W IDLE / 79%"></div>
+          </div>
+        </div>
+        <div class="spec-row" id="spec-bio">
+          <div class="spec-label">BIO-COMPATIBILITY</div>
+          <div class="spec-bar-wrap">
+            <div class="spec-bar-fill" style="--w:99%" data-label="ISO-9001 / 99%"></div>
+          </div>
+        </div>
+        <div class="spec-row" id="spec-security">
+          <div class="spec-label">SECURITY RATING</div>
+          <div class="spec-bar-wrap">
+            <div class="spec-bar-fill spec-bar-fill--red" style="--w:100%" data-label="LEVEL-5 MAX / 100%"></div>
+          </div>
+        </div>
+        <div class="tech-features-list">
+          <div class="tech-feat" id="techfeat-ai"><span class="feat-dot" aria-hidden="true"></span>Adaptive AI Learning Core</div>
+          <div class="tech-feat" id="techfeat-self"><span class="feat-dot" aria-hidden="true"></span>Self-Repairing Nanobiotics</div>
+          <div class="tech-feat" id="techfeat-quantum"><span class="feat-dot" aria-hidden="true"></span>Quantum-Encrypted Comms</div>
+          <div class="tech-feat" id="techfeat-bio"><span class="feat-dot" aria-hidden="true"></span>Zero-Rejection Bio-Interface</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ TESTIMONIALS ░░ -->
+  <section id="testimonials" class="testimonials" aria-labelledby="testimonials-heading">
+    <div class="section-header">
+      <div class="section-tag">// FIELD REPORTS</div>
+      <h2 id="testimonials-heading" class="section-title">OPERATOR <span class="accent">INTEL</span></h2>
+    </div>
+    <div class="testimonials-track-wrap">
+      <div class="testimonials-track" id="testimonials-track" aria-label="Testimonials carousel">
+
+        <article class="testi-card" id="testi-1" aria-labelledby="testi-1-name">
+          <div class="testi-quote" aria-hidden="true">"</div>
+          <p class="testi-text">The Neural Link Pro transformed how I interact with complex systems. My response latency dropped from 300ms to zero. I am effectively a different species now.</p>
+          <div class="testi-author">
+            <div class="testi-avatar" aria-hidden="true">KM</div>
+            <div>
+              <div class="testi-name" id="testi-1-name">Capt. K. Morrison</div>
+              <div class="testi-role">Special Operations, Unit 7</div>
+            </div>
+            <div class="testi-rating" aria-label="5 out of 5 stars">★★★★★</div>
+          </div>
+        </article>
+
+        <article class="testi-card" id="testi-2" aria-labelledby="testi-2-name">
+          <div class="testi-quote" aria-hidden="true">"</div>
+          <p class="testi-text">The Titan Arm X7 restored what I thought I lost forever — and gave me capabilities far beyond my original limb. Precision engineering at its finest.</p>
+          <div class="testi-author">
+            <div class="testi-avatar" aria-hidden="true">DR</div>
+            <div>
+              <div class="testi-name" id="testi-2-name">Dr. R. Nakamura</div>
+              <div class="testi-role">Neuro-surgeon, Tokyo Medical AI</div>
+            </div>
+            <div class="testi-rating" aria-label="5 out of 5 stars">★★★★★</div>
+          </div>
+        </article>
+
+        <article class="testi-card" id="testi-3" aria-labelledby="testi-3-name">
+          <div class="testi-quote" aria-hidden="true">"</div>
+          <p class="testi-text">Optic Vortex changed everything. I can see thermals through walls, overlay tactical data, and track 12 targets simultaneously. This is the future.</p>
+          <div class="testi-author">
+            <div class="testi-avatar" aria-hidden="true">ZX</div>
+            <div>
+              <div class="testi-name" id="testi-3-name">Agent Z. Xu</div>
+              <div class="testi-role">Counter-Intelligence Operative</div>
+            </div>
+            <div class="testi-rating" aria-label="5 out of 5 stars">★★★★★</div>
+          </div>
+        </article>
+
+        <article class="testi-card" id="testi-4" aria-labelledby="testi-4-name">
+          <div class="testi-quote" aria-hidden="true">"</div>
+          <p class="testi-text">After integrating the full Nexus suite, my cognitive throughput increased 800%. I process, analyze, and decide faster than any unaugmented human team.</p>
+          <div class="testi-author">
+            <div class="testi-avatar" aria-hidden="true">LV</div>
+            <div>
+              <div class="testi-name" id="testi-4-name">L. Vargas</div>
+              <div class="testi-role">Chief Strategist, MegaCorp Defense</div>
+            </div>
+            <div class="testi-rating" aria-label="5 out of 5 stars">★★★★★</div>
+          </div>
+        </article>
+
+      </div>
+      <div class="testi-controls" aria-label="Carousel controls">
+        <button class="testi-btn" id="testi-prev" aria-label="Previous testimonial">←</button>
+        <div class="testi-dots" id="testi-dots" role="tablist" aria-label="Testimonial indicators"></div>
+        <button class="testi-btn" id="testi-next" aria-label="Next testimonial">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ CTA / CONTACT ░░ -->
+  <section id="contact" class="cta-section" aria-labelledby="cta-heading">
+    <div class="cta-bg-grid" aria-hidden="true"></div>
+    <div class="cta-inner">
+      <div class="section-tag">// BEGIN AUGMENTATION PROTOCOL</div>
+      <h2 id="cta-heading" class="cta-title">READY TO <span class="accent">TRANSCEND</span>?</h2>
+      <p class="cta-sub">Join 47,000+ humans who have already crossed the threshold. Your augmentation awaits.</p>
+      <form class="cta-form" id="augmentation-form" novalidate aria-label="Augmentation request form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="form-name" class="form-label">OPERATOR NAME</label>
+            <input type="text" id="form-name" name="name" class="form-input" placeholder="John Doe" autocomplete="name" required aria-required="true" />
+          </div>
+          <div class="form-group">
+            <label for="form-email" class="form-label">NEURAL ID (EMAIL)</label>
+            <input type="email" id="form-email" name="email" class="form-input" placeholder="operator@nexus.io" autocomplete="email" required aria-required="true" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="form-module" class="form-label">DESIRED MODULE</label>
+          <select id="form-module" name="module" class="form-input form-select" required aria-required="true">
+            <option value="" disabled selected>-- SELECT AUGMENTATION --</option>
+            <option value="neural">Neural Link Pro</option>
+            <option value="arm">Titan Arm X7</option>
+            <option value="optic">Optic Vortex</option>
+            <option value="full">Full Nexus Suite</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="form-message" class="form-label">MISSION BRIEFING</label>
+          <textarea id="form-message" name="message" class="form-input form-textarea" rows="4" placeholder="Describe your augmentation objectives..." aria-label="Mission briefing"></textarea>
+        </div>
+        <button type="submit" class="btn-primary btn-submit" id="form-submit-btn">
+          <span class="btn-glow" aria-hidden="true"></span>
+          SUBMIT REQUEST
+        </button>
+        <div class="form-success" id="form-success" role="status" aria-live="polite" hidden>
+          <span aria-hidden="true">✓</span> REQUEST RECEIVED — NEXUS TEAM WILL CONTACT YOU WITHIN 24 HRS
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon" aria-hidden="true">⬡</span>
+        <span class="logo-text">NEXUS<span class="logo-accent">CYBORG</span></span>
+        <p class="footer-tagline">Humanity's next chapter — engineered.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <div class="footer-col">
+          <div class="footer-col-title">PRODUCTS</div>
+          <a href="#features" class="footer-link" id="footer-neural">Neural Link Pro</a>
+          <a href="#features" class="footer-link" id="footer-arm">Titan Arm X7</a>
+          <a href="#features" class="footer-link" id="footer-optic">Optic Vortex</a>
+          <a href="#features" class="footer-link" id="footer-suite">Full Suite</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">COMPANY</div>
+          <a href="#" class="footer-link" id="footer-about">About Nexus</a>
+          <a href="#" class="footer-link" id="footer-research">Research</a>
+          <a href="#" class="footer-link" id="footer-ethics">Bio-Ethics</a>
+          <a href="#" class="footer-link" id="footer-careers">Careers</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">LEGAL</div>
+          <a href="#" class="footer-link" id="footer-privacy">Privacy Policy</a>
+          <a href="#" class="footer-link" id="footer-terms">Terms of Service</a>
+          <a href="#" class="footer-link" id="footer-hipaa">HIPAA Compliance</a>
+          <a href="#" class="footer-link" id="footer-warranty">Warranty</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2094 NEXUS CYBORG CORPORATION. ALL RIGHTS RESERVED.</span>
+      <span class="footer-sys">SYS BUILD: 7.0.2094-ALPHA</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
